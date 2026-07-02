@@ -47,8 +47,8 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 15px; 
-    font-size: 14px; 
+    gap: 15px;
+    font-size: 14px;
 }
 a {
     text-decoration: none;
@@ -61,10 +61,93 @@ a:hover {
     color: #d97450;
 }
 
-/* ==================== RESPONSIVE DESIGN HEADER ==================== */
+/* ==================== SECCIÓN HERO ==================== */
+.hero {
+    /* filtro oscuro para el texto para que se lea bien */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("/img/choix3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Mobile first */
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenido-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display SC", serif;
+    color: #fdfbf7;
+    font-size: 35px;
+}
+
+.hero p {
+    color: #fdfbf7;
+    max-width: 700px;
+    font-size: 16px;
+    font-weight: 350;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d97450;
+    color: #fdfbf7 !important; /*forzar el color del texto con important*/
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 35px;
+    box-shadow: 0 10px 15px rgba(217, 116, 80, 0.3);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b85c3b;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+/*header responsive*/
 @media (min-width: 768px) {
     header {
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
         padding: 15px 40px;
     }
@@ -72,5 +155,20 @@ a:hover {
     nav ul {
         gap: 30px;
         font-size: 16px;
+    }
+
+    /*hero responsive*/
+    .hero {
+        height: 85vh;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+        line-height: 65px;
+    }
+
+    .hero p {
+        font-size: 19px;
+        line-height: 30px;
     }
 }
