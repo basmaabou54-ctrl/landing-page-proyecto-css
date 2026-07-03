@@ -6,6 +6,9 @@
     box-sizing: border-box;
     scroll-padding-top: 90px; /* Evita que el menú fijo (sticky) oculte el principio de las secciones al hacer scroll */
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Poppins", sans-serif;
     background-color: #fdfbf7;
@@ -122,26 +125,89 @@ a:hover {
     background-color: #b85c3b;
     transform: translateY(-3px);
 }
+/* ==================== SECCIÓN COLECCIONES ==================== */
+#colecciones {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fdfbf7;
+}
 
+.titulo-colecciones {
+    font-family: "Playfair Display SC", serif;
+    font-size: 32px;
+    color: #d97450;
+    margin-bottom: 10px;
+}
 
+.subtitulo-colecciones {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 40px;
+}
 
+/* titulos de categorias */
+.banner-categoria {
+    text-align: left;
+    margin: 40px 0 20px 0;
+    border-bottom: 2px solid #d97450;
+    padding-bottom: 8px;
+}
 
+.banner-categoria h2 {
+    font-family: "Playfair Display SC", serif;
+    font-size: 24px;
+    color: #4a3b32;
+}
 
+.galeria-productos {
+    display: grid;
+    grid-template-columns: 1fr; /* mobile first */
+    gap: 30px;
+    padding: 10px 0;
+}
 
+.caja-producto {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    margin: 0 auto;
+    transition:transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
 
+.caja-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(217, 116, 80, 0.15);
+}
 
+.producto-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
+.producto-titulo {
+    font-size: 18px;
+    color: #d97450;
+    margin: 15px 0 5px 0;
+}
 
+.producto-precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a3b32;
+}
 
-
-
-
-
-
-
-
-
-
+.producto-descripcion {
+    height: auto;
+    overflow: hidden;
+    color: #666666;
+    font-size: 14px;
+    line-height: 20px;
+}
 
 /* ==================== RESPONSIVE DESIGN ==================== */
 /*header responsive*/
@@ -170,5 +236,33 @@ a:hover {
     .hero p {
         font-size: 19px;
         line-height: 30px;
+    }
+
+    /* colecciones responsive */
+    .banner-categoria h2 {
+        font-size: 28px;
+    }
+
+    .galeria-productos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .caja-producto {
+        max-width: none;
+        margin: 0;
+    }
+    .producto-descripcion {
+        height: 0;
+        margin-top: 0;
+        overflow: hidden;
+        transition:
+            height 0.4s ease,
+            margin-top 0.4s ease;
+    }
+
+    .caja-producto:hover .producto-descripcion {
+        height: 60px;
+        margin-top: 12px;
     }
 }
