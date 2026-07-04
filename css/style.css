@@ -69,7 +69,7 @@ a:hover {
     /* filtro oscuro para el texto para que se lea bien */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("/img/choix3.png");
+        url("../img/choix3.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
