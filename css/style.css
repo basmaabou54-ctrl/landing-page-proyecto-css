@@ -64,7 +64,7 @@ a:hover {
     color: #d97450;
 }
 
-/* ==================== SECCIÓN HERO ==================== */
+/* ==================== SECTION HERO ==================== */
 .hero {
     /* filtro oscuro para el texto para que se lea bien */
     background-image:
@@ -125,7 +125,7 @@ a:hover {
     background-color: #b85c3b;
     transform: translateY(-3px);
 }
-/* ==================== SECCIÓN COLECCIONES ==================== */
+/* ==================== SECTION COLECCIONES ==================== */
 #colecciones {
     padding: 60px 20px;
     text-align: center;
@@ -262,6 +262,122 @@ a:hover {
     object-fit: cover;
 }
 
+/* ==================== SECTION CONTACTO ==================== */
+:root {
+    --color-error: rgb(195, 12, 12);
+    --color-exito: rgb(0, 162, 0);
+    --color-principal: #4A3B32;
+}
+
+#contacto {
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contacto p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo-input label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd; 
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+
+/* Border rojo js*/
+.grupo-input input.error,
+.grupo-input textarea.error {
+    border-color: var(--color-error);
+}
+
+/* mensaje de error */
+.error-message {
+    color: var(--color-error);
+    font-size: 14px;
+    display: block;
+    min-height: 25px; 
+    visibility: hidden;
+    transition: visibility 0.3s;
+    margin-top: 2px;
+}
+
+.error-message::before {
+    content: '⚠️ '; 
+}
+
+.error-message.visible {
+    visibility: visible;
+}
+
+/*mensaje de éxito*/
+.exito-message {
+    color: var(--color-exito);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 15px;
+    display: block;
+    min-height: 25px;
+    visibility: hidden; /* oculto por defecto */
+    transition: visibility 0.3s;
+}
+
+.exito-message.visible {
+    visibility: visible; /* no hay error */
+}
+
+.boton-formulario {
+    padding: 15px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    margin-top: 15px;
+}
+
+.boton-formulario:hover {
+    opacity: 0.8;
+}
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 /*header responsive*/
 @media (min-width: 768px) {
@@ -319,6 +435,8 @@ a:hover {
         margin-top: 12px;
     }
 }
+
+/* historia responsive */
 @media (min-width: 768px) {
     .historia-section {
         padding: 100px 40px;
