@@ -378,6 +378,62 @@ a:hover {
     opacity: 0.8;
 }
 
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: var(--color-principal);
+    color: #fdfbf7; 
+    padding: 40px 20px 20px 20px;
+    margin-top: 60px;
+}
+
+.contenedor-footer {
+    display: flex;
+    flex-direction: column; /* mobil first*/
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(253, 251, 247, 0.1);
+}
+
+.info-footer h3 {
+    font-family: "Playfair Display SC", serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.info-footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.links-footer {
+    display: flex;
+    gap: 20px;
+}
+
+.links-footer a {
+    color: #fdfbf7;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.links-footer a:hover {
+    color: #d97450; 
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 /*header responsive*/
 @media (min-width: 768px) {
@@ -456,5 +512,13 @@ a:hover {
         flex: 1;
         border-radius: 12px;
         max-width: 500px;
+    }
+}
+/*footer responsive*/
+@media (min-width: 768px) {
+    .contenedor-footer {
+        flex-direction: row; 
+        justify-content: space-between; 
+        text-align: left;
     }
 }
