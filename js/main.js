@@ -8,6 +8,7 @@ const mensajeExito = document.querySelector('#mensajeExito');
 const todosLosInputs = [inputNombre, inputEmail, inputMensaje];
 
 
+
 formulario.addEventListener('submit', (event) => {
   
     event.preventDefault();
