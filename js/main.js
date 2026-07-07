@@ -61,3 +61,12 @@ todosLosInputs.forEach(input => {
         }
     });
 });
+
+const bannieres = document.querySelectorAll('.banner-categoria');
+
+bannieres.forEach(banniere => {
+    banniere.addEventListener('click', () => {
+        const galerie = banniere.nextElementSibling;
+        galerie.classList.toggle('activo');
+    });
+});

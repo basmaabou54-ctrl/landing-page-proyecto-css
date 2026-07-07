@@ -151,21 +151,54 @@ a:hover {
     margin: 40px 0 20px 0;
     border-bottom: 2px solid #d97450;
     padding-bottom: 8px;
+    cursor: pointer; 
+    user-select: none;
+
+
+
 }
 
 .banner-categoria h2 {
     font-family: "Playfair Display SC", serif;
     font-size: 24px;
     color: #4a3b32;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-categoria:hover h2 {
+    color: #d97450;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+.banner-categoria h2::after {
+    content: "🔽";
+   
+    font-size: 12px;
+    font-weight: 600;
+   
+  
+    background-color: rgba(219, 116, 80, 0.1); 
+    color: #d97450;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
 .galeria-productos {
     display: grid;
-    grid-template-columns: 1fr; /* mobile first */
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 10px 0;
+    transition: all 0.4s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
-
+.galeria-productos.activo {
+    max-height: 1400px; 
+    opacity: 1;
+    padding: 20px 0; 
+}
 .caja-producto {
     background-color: #ffffff;
     padding: 20px;
