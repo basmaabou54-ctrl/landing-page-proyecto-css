@@ -159,15 +159,14 @@ a:hover {
 
 /* titulos de categorias */
 .banner-categoria {
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    cursor: pointer;
     margin: 40px 0 20px 0;
     border-bottom: 2px solid #d97450;
     padding-bottom: 8px;
-    cursor: pointer; 
-    user-select: none;
-
-
-
+   user-select: none;
 }
 
 .banner-categoria h2 {
@@ -182,23 +181,14 @@ a:hover {
     transform: translateX(5px);
     transition: all 0.3s ease;
 }
-.banner-categoria h2::after {
-    content: "🔽";
-   
-    font-size: 12px;
-    font-weight: 600;
-   
-  
-    background-color: rgba(219, 116, 80, 0.1); 
-    color: #d97450;
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
 
-.banner-categoria:has(+ .galeria-productos.activo) h2::after {
-    content: " ➖"; 
-    color: #4a3b32; 
+.icono-banner {
+   width: 24px;   /*mobile first*/
+    height: 24px;
+    display: block;
+    margin: 0;     
+    transition: transform 0.3s ease;
+    flex-shrink: 0; 
 }
 .galeria-productos {
     display: grid;
@@ -209,12 +199,17 @@ a:hover {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 .galeria-productos.activo {
-    max-height: 1400px; 
+    max-height:2500px; 
     opacity: 1;
     padding: 20px 0; 
 }
+.banner-categoria.activo .icono-banner {
+    transform: rotate(180deg);
+}
+
 .caja-producto {
     background-color: #ffffff;
     padding: 20px;
@@ -584,5 +579,14 @@ footer {
         flex-direction: row; 
         justify-content: space-between; 
         text-align: left;
+    }
+}
+
+/*flecha de banner*/
+
+@media (min-width: 768px) {
+    .icono-banner {
+      width: 35px;  
+        height: 35px;
     }
 }
