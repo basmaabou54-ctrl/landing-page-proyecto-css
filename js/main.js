@@ -71,3 +71,6 @@ bannieres.forEach(banniere => {
         galerie.classList.toggle('activo');
     });
 });
+
+
+
