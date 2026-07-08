@@ -6,6 +6,7 @@
     box-sizing: border-box;
     scroll-padding-top: 90px; /* Evita que el menú fijo (sticky) oculte el principio de las secciones al hacer scroll */
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -162,21 +163,58 @@ a:hover {
     margin: 40px 0 20px 0;
     border-bottom: 2px solid #d97450;
     padding-bottom: 8px;
+    cursor: pointer; 
+    user-select: none;
+
+
+
 }
 
 .banner-categoria h2 {
     font-family: "Playfair Display SC", serif;
     font-size: 24px;
     color: #4a3b32;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-categoria:hover h2 {
+    color: #d97450;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+.banner-categoria h2::after {
+    content: "🔽";
+   
+    font-size: 12px;
+    font-weight: 600;
+   
+  
+    background-color: rgba(219, 116, 80, 0.1); 
+    color: #d97450;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
+.banner-categoria:has(+ .galeria-productos.activo) h2::after {
+    content: " ➖"; 
+    color: #4a3b32; 
+}
 .galeria-productos {
     display: grid;
-    grid-template-columns: 1fr; /* mobile first */
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 10px 0;
+    transition: all 0.4s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
-
+.galeria-productos.activo {
+    max-height: 1400px; 
+    opacity: 1;
+    padding: 20px 0; 
+}
 .caja-producto {
     background-color: #ffffff;
     padding: 20px;
@@ -220,7 +258,22 @@ a:hover {
     font-size: 14px;
     line-height: 20px;
 }
+.btn-encargar {
+    display: inline-block;
+    background-color: #d97450;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: background-color 0.2s ease;
+}
 
+.btn-encargar:hover {
+    background-color: #b85c3b;
+}
 /* ============================== SECTION HISTORIA ==================================== */
 
 .historia-section {
