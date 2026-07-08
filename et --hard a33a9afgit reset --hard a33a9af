@@ -1,0 +1,18 @@
+[33mbe0dcbf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to be0dcbf
+[33m38b0f45[m HEAD@{1}: reset: moving to 38b0f45
+[33ma33a9af[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{2}: merge develop: Fast-forward
+[33m38b0f45[m HEAD@{3}: checkout: moving from develop to main
+[33ma33a9af[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{4}: checkout: moving from main to develop
+[33m38b0f45[m HEAD@{5}: checkout: moving from develop to main
+[33ma33a9af[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelop[m[33m)[m HEAD@{6}: commit: mejorar mostrar y ocultar banner
+[33mfdde2a2[m HEAD@{7}: commit (merge): Merge remote changes: ajout du code pour gérer les bannières
+[33m7e63a30[m HEAD@{8}: reset: moving to HEAD
+[33m7e63a30[m HEAD@{9}: commit: confirmar
+[33ma76e619[m HEAD@{10}: commit: logo interactivo
+[33m14a94cf[m HEAD@{11}: commit: save-clase
+[33m38b0f45[m HEAD@{12}: checkout: moving from main to develop
+[33m38b0f45[m HEAD@{13}: checkout: moving from main to main
+[33m38b0f45[m HEAD@{14}: Branch: renamed refs/heads/develop to refs/heads/main
+[33m38b0f45[m HEAD@{16}: pull origin develop: Fast-forward
+[33mbe0dcbf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{17}: checkout: moving from develop to develop
+[33mbe0dcbf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{18}: clone: from https://github.com/basmaabou54-ctrl/landing-page-proyecto-css.git
